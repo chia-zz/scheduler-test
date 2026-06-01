@@ -18,21 +18,25 @@ const TABS = [
   { key: 'settings', label: '設定', Icon: IconSettings },
 ]
 
-export default function Header({ tab, setTab, onLogout }) {
+export default function Header({ tab, setTab, onLogout, onHome }) {
   const { data, stepMonth } = useApp()
   const month = data.ui.selectedMonth
 
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-[rgba(252,250,244,0.92)] backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between gap-3 px-4 py-3">
-        <div className="flex items-center gap-2">
+        <button
+          className="flex items-center gap-2 rounded-xl px-1 py-1 transition hover:bg-bg"
+          onClick={onHome}
+          title="回到月份首頁"
+        >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-txt">
             <IconCoffee width={20} height={20} />
           </span>
           <span className="hidden font-display text-lg font-semibold text-main sm:block">
             咖啡廳排班
           </span>
-        </div>
+        </button>
 
         {/* month navigator */}
         <div className="flex items-center gap-1 rounded-xl border border-line bg-bg px-1 py-1">

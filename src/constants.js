@@ -22,13 +22,13 @@ export const DEFAULT_SHIFT_PRESETS = {
 
 // ---- Default roster --------------------------------------------------------
 export const DEFAULT_EMPLOYEES = [
-  { name: '樂', role: 'fulltime', color: '#E29B9B', emoji: '🎵' },
-  { name: '咪', role: 'parttime', color: '#A8C7A0', emoji: '🐱' },
-  { name: '誼', role: 'parttime', color: '#ECCF7D', emoji: '🤝' },
-  { name: '畢', role: 'parttime', color: '#9DB8D8', emoji: '📖' },
+  { name: '樂', role: 'fulltime', color: '#E29B9B', emoji: '🐱' },
+  { name: '咪', role: 'parttime', color: '#A8C7A0', emoji: '🎸' },
+  { name: '誼', role: 'parttime', color: '#ECCF7D', emoji: '🍸' },
+  { name: '畢', role: 'parttime', color: '#9DB8D8', emoji: '💪' },
   { name: '妘', role: 'parttime', color: '#C3A8DC', emoji: '☁️' },
-  { name: '毛', role: 'parttime', color: '#E2B58C', emoji: '🐑' },
-  { name: '君', role: 'parttime', color: '#8FC7C0', emoji: '👑' },
+  { name: '毛', role: 'parttime', color: '#E2B58C', emoji: '🐶' },
+  { name: '君', role: 'parttime', color: '#8FC7C0', emoji: '🖋️' },
 ]
 
 // ---- Pickers ---------------------------------------------------------------
@@ -38,9 +38,9 @@ export const COLOR_SWATCHES = [
 ]
 
 export const EMOJI_CHOICES = [
-  '🎵', '🐱', '🤝', '📖', '☁️', '🐑', '👑', '🌿', '🍵', '☕',
+  '🎵', '🐱', '🎸', '🍸', '☁️', '🐶', '🖋️', '🌿', '🍵', '☕',
   '🐰', '🦊', '🐻', '🐼', '🐨', '🦉', '🌸', '🐝', '⭐', '🍀',
-  '🍩', '🧋', '🥐', '🌙', '🔆', '🐧', '🦄', '🐢', '🦔', '🌷',
+  '🍩', '🌠', '🍁', '🌙', '🔆', '🦝', '🍓', '🐢', '🦔', '🌷',
 ]
 
 // ---- Roles -----------------------------------------------------------------
