@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-primary:      #4D7EA8;
+  --c-primary-txt:  #FFFDF8;
+  --c-primary-dark: #3C668A;
+  --c-bg:           #F2F6F3;
+  --c-surface:      #FCFAF4;
+  --c-text-main:    #32414C;
+  --c-text-sub:     #7D8F97;
+  --c-border:       #D9E4E2;
+  --c-error:        #C66A6A;
+  --c-error-bg:     #F8ECEB;
+  --c-warning:      #C9924A;
+  --c-warning-bg:   #FAF4E8;
+  --c-success:      #6F9882;
+  --c-success-bg:   #EDF5F0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--c-bg);
+  color: var(--c-text-main);
+  font-family: 'Outfit', 'Noto Sans TC', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* tidy native time / color inputs a touch */
+input[type='time'] {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-border);
+  border-radius: 999px;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-soft;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-xl px-4 py-2 text-sm font-medium transition
+      active:scale-[.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-primary-txt hover:bg-primary-dark;
+  }
+  .btn-ghost {
+    @apply btn border border-line bg-surface text-main hover:bg-bg;
+  }
+  .btn-danger {
+    @apply btn bg-error text-white hover:opacity-90;
+  }
+  .btn-icon {
+    @apply inline-flex h-8 w-8 items-center justify-center rounded-lg border border-line bg-surface
+      text-sub transition hover:bg-bg active:scale-95 disabled:opacity-30;
+  }
+  .input {
+    @apply w-full rounded-xl border border-line bg-surface px-3 py-2 text-sm text-main outline-none
+      transition focus:border-primary;
+  }
+  .label {
+    @apply mb-1 block text-xs font-medium text-sub;
+  }
+  .tag {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fadeUp 0.35s ease both;
+}
