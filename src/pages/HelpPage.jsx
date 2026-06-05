@@ -14,10 +14,10 @@ function Section({ title, children }) {
   );
 }
 
-export default function HelpPage({ onBack }) {
+export default function HelpPage() {
   return (
-    <div className='min-h-screen bg-bg'>
-      <div>
+    <div className='mx-auto max-w-[820px]'>
+      <div className='mb-5'>
         <h1 className='font-display text-xl font-bold text-main'>說明</h1>
         <p className='text-sm text-sub'>
           大家豪！這裡是排班小工具的操作流程說明。
@@ -25,7 +25,8 @@ export default function HelpPage({ onBack }) {
           建議依下列順序進行：先建立員工與班別順序，再針對每個月份排班。
         </p>
       </div>
-      <main className='mx-auto space-y-5 py-6'>
+
+      <div className='space-y-5'>
         <Section title='1. 登入與首頁'>
           <p>
             第一次開啟會請你設定一組管理密碼；之後每次重新開啟需輸入密碼（重新整理頁面不需要）。
@@ -104,7 +105,7 @@ export default function HelpPage({ onBack }) {
             備份」備份；換電腦或瀏覽器時，於另一台「匯入」即可還原與同步。
           </p>
         </Section>
-      </main>
+      </div>
     </div>
   );
 }
