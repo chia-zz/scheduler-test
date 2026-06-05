@@ -34,7 +34,12 @@ export default function Header({ tab, setTab, onLogout, onHome }) {
         >
           <span className='flex h-9 w-9 items-center justify-center rounded-xl border border-line bg-bg text-primary-txt'>
             {/* <IconCoffee width={20} height={20} /> */}
-            <img src='/yet_logo.webp' alt='yet_logo' width={20} height={20} />
+            <img
+              src={`${import.meta.env.BASE_URL}yet_logo.webp`}
+              alt='yet_logo'
+              width={20}
+              height={20}
+            />
           </span>
           <span className='hidden font-display text-lg font-semibold text-main sm:block'>
             排班小工具

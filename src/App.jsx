@@ -44,7 +44,10 @@ export default function App() {
           setTab('schedule');
           setView('month');
         }}
-        onHelp={() => setView('help')}
+        onHelp={() => {
+          setTab('help');
+          setView('month');
+        }}
         onSettings={() => {
           setTab('settings');
           setView('month');
@@ -53,11 +56,6 @@ export default function App() {
       />
     );
   }
-
-  // // 說明頁面
-  // if (view === 'help') {
-  //   return <HelpPage onBack={() => setView('home')} />;
-  // }
 
   // 月份頁：排班 / 員工 / 班別順序 / 設定 / 說明
   return (

@@ -38,7 +38,7 @@ export default function HomePage({
           <div className='flex items-center gap-2.5'>
             <span className='flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-primary-txt'>
               <img
-                src='/yet_logo_white.svg'
+                src={`${import.meta.env.BASE_URL}yet_logo_white.svg`}
                 alt='yet_logo'
                 width={24}
                 height={24}

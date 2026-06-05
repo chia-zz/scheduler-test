@@ -41,7 +41,7 @@ export default function Login({ onUnlock }) {
             <div className='mb-6 flex flex-col items-center text-center'>
               <div className='mb-3 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary text-primary-txt shadow-card'>
                 <img
-                  src='/yet_logo_white.svg'
+                  src={`${import.meta.env.BASE_URL}yet_logo_white.svg`}
                   alt='yet_logo'
                   width={40}
                   height={40}
